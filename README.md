@@ -4,6 +4,8 @@
 
 # [Documentation](https://docs.rs/max32660-pac)
 
+# SVD Fixes
+To regenerate this pac if SVD corrections are made run the [rebuild_pac.sh](./rebuild_pac.sh) script.
 # License
 
 Licensed under either of

@@ -1814,7 +1814,7 @@
      <name>CLKCN</name>
      <description>Clock Control.</description>
      <addressOffset>0x08</addressOffset>
-     <resetValue>0x00000008</resetValue>
+     <resetValue>0xC0040008</resetValue>
      <fields>
       <field>
        <name>PSC</name>

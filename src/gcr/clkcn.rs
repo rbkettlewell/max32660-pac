@@ -408,7 +408,7 @@ impl<'a> X32K_EN_W<'a> {
         self.w
     }
 }
-#[doc = "60MHz High Frequency Internal Reference Clock Enable.\n\nValue on reset: 0"]
+#[doc = "60MHz High Frequency Internal Reference Clock Enable.\n\nValue on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum HIRC_EN_A {
     #[doc = "0: Is Disabled."]
@@ -800,10 +800,10 @@ impl crate::Readable for CLKCN_SPEC {
 impl crate::Writable for CLKCN_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets CLKCN to value 0x08"]
+#[doc = "`reset()` method sets CLKCN to value 0xc004_0008"]
 impl crate::Resettable for CLKCN_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0x08
+        0xc004_0008
     }
 }

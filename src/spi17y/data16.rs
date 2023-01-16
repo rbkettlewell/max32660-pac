@@ -57,7 +57,7 @@ impl<'a> DATA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = value as u16;
+        self.w.bits = value;
         self.w
     }
 }
@@ -65,7 +65,7 @@ impl R {
     #[doc = "Bits 0:15 - Read to pull from RX FIFO, write to put into TX FIFO."]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
-        DATA_R::new(self.bits as u16)
+        DATA_R::new(self.bits)
     }
 }
 impl W {

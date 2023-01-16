@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:31 - Mask of all of the pins on the port."]
     #[inline(always)]
     pub fn gpio_in(&self) -> GPIO_IN_R {
-        GPIO_IN_R::new((self.bits & 0xffff_ffff) as u32)
+        GPIO_IN_R::new(self.bits)
     }
 }
 #[doc = "GPIO Input Register. Read-only register to read from the logic states of the GPIO pins on this port.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [in_](index.html) module"]

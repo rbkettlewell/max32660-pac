@@ -119,7 +119,7 @@ impl<'a> GPIO_PAD_CFG1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
+        self.w.bits = value;
         self.w
     }
 }
@@ -127,7 +127,7 @@ impl R {
     #[doc = "Bits 0:31 - The two bits in GPIO_PAD_CFG1 and GPIO_PAD_CFG2 for each GPIO pin work together to determine the pad mode when the GPIO is set to input mode."]
     #[inline(always)]
     pub fn gpio_pad_cfg1(&self) -> GPIO_PAD_CFG1_R {
-        GPIO_PAD_CFG1_R::new((self.bits & 0xffff_ffff) as u32)
+        GPIO_PAD_CFG1_R::new(self.bits)
     }
 }
 impl W {

@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn erraddr(&self) -> ERRADDR_R {
-        ERRADDR_R::new((self.bits & 0xffff_ffff) as u32)
+        ERRADDR_R::new(self.bits)
     }
 }
 #[doc = "Read-only field set by the SIB block if a CRC error occurs during the read of the OTP memory. Contains the failing address in OTP memory (when CRCERR equals 1).\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [erraddr](index.html) module"]

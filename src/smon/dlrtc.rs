@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:31 - DRS Log RTC Value. This register contains the 32 bit value in the RTC second register when the last DRS event occured."]
     #[inline(always)]
     pub fn dlrtc(&self) -> DLRTC_R {
-        DLRTC_R::new((self.bits & 0xffff_ffff) as u32)
+        DLRTC_R::new(self.bits)
     }
 }
 #[doc = "DRS Log RTC Value. This register contains the 32 bit value in the RTC second register when the last DRS event occurred.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dlrtc](index.html) module"]

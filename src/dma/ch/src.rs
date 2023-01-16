@@ -34,26 +34,26 @@ impl From<crate::W<SRC_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ADDR` reader - "]
-pub struct ADDR_R(crate::FieldReader<u32, u32>);
-impl ADDR_R {
+#[doc = "Field `SRC` reader - "]
+pub struct SRC_R(crate::FieldReader<u32, u32>);
+impl SRC_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
-        ADDR_R(crate::FieldReader::new(bits))
+        SRC_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for ADDR_R {
+impl core::ops::Deref for SRC_R {
     type Target = crate::FieldReader<u32, u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `ADDR` writer - "]
-pub struct ADDR_W<'a> {
+#[doc = "Field `SRC` writer - "]
+pub struct SRC_W<'a> {
     w: &'a mut W,
 }
-impl<'a> ADDR_W<'a> {
+impl<'a> SRC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
@@ -64,15 +64,15 @@ impl<'a> ADDR_W<'a> {
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn addr(&self) -> ADDR_R {
-        ADDR_R::new(self.bits)
+    pub fn src(&self) -> SRC_R {
+        SRC_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W {
-        ADDR_W { w: self }
+    pub fn src(&mut self) -> SRC_W {
+        SRC_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -50,18 +50,6 @@ extern "C" {
     fn DMA2();
     fn DMA3();
     fn I2C1();
-    fn DMA4();
-    fn DMA5();
-    fn DMA6();
-    fn DMA7();
-    fn DMA8();
-    fn DMA9();
-    fn DMA10();
-    fn DMA11();
-    fn DMA12();
-    fn DMA13();
-    fn DMA14();
-    fn DMA15();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -72,7 +60,7 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
-pub static __INTERRUPTS: [Vector; 80] = [
+pub static __INTERRUPTS: [Vector; 37] = [
     Vector { _reserved: 0 },
     Vector { _handler: WDT0 },
     Vector { _reserved: 0 },
@@ -112,49 +100,6 @@ pub static __INTERRUPTS: [Vector; 80] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: I2C1 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: DMA4 },
-    Vector { _handler: DMA5 },
-    Vector { _handler: DMA6 },
-    Vector { _handler: DMA7 },
-    Vector { _handler: DMA8 },
-    Vector { _handler: DMA9 },
-    Vector { _handler: DMA10 },
-    Vector { _handler: DMA11 },
-    Vector { _handler: DMA12 },
-    Vector { _handler: DMA13 },
-    Vector { _handler: DMA14 },
-    Vector { _handler: DMA15 },
 ];
 #[doc = r"Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -192,30 +137,6 @@ pub enum Interrupt {
     DMA3 = 31,
     #[doc = "36 - I2C1 IRQ"]
     I2C1 = 36,
-    #[doc = "68 - DMA4"]
-    DMA4 = 68,
-    #[doc = "69 - DMA5"]
-    DMA5 = 69,
-    #[doc = "70 - DMA6"]
-    DMA6 = 70,
-    #[doc = "71 - DMA7"]
-    DMA7 = 71,
-    #[doc = "72 - DMA8"]
-    DMA8 = 72,
-    #[doc = "73 - DMA9"]
-    DMA9 = 73,
-    #[doc = "74 - DMA10"]
-    DMA10 = 74,
-    #[doc = "75 - DMA11"]
-    DMA11 = 75,
-    #[doc = "76 - DMA12"]
-    DMA12 = 76,
-    #[doc = "77 - DMA13"]
-    DMA13 = 77,
-    #[doc = "78 - DMA14"]
-    DMA14 = 78,
-    #[doc = "79 - DMA15"]
-    DMA15 = 79,
 }
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]

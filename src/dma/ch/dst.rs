@@ -34,26 +34,26 @@ impl From<crate::W<DST_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ADDR` reader - "]
-pub struct ADDR_R(crate::FieldReader<u32, u32>);
-impl ADDR_R {
+#[doc = "Field `DST` reader - "]
+pub struct DST_R(crate::FieldReader<u32, u32>);
+impl DST_R {
     #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
-        ADDR_R(crate::FieldReader::new(bits))
+        DST_R(crate::FieldReader::new(bits))
     }
 }
-impl core::ops::Deref for ADDR_R {
+impl core::ops::Deref for DST_R {
     type Target = crate::FieldReader<u32, u32>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-#[doc = "Field `ADDR` writer - "]
-pub struct ADDR_W<'a> {
+#[doc = "Field `DST` writer - "]
+pub struct DST_W<'a> {
     w: &'a mut W,
 }
-impl<'a> ADDR_W<'a> {
+impl<'a> DST_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
@@ -64,15 +64,15 @@ impl<'a> ADDR_W<'a> {
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn addr(&self) -> ADDR_R {
-        ADDR_R::new(self.bits)
+    pub fn dst(&self) -> DST_R {
+        DST_R::new(self.bits)
     }
 }
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W {
-        ADDR_W { w: self }
+    pub fn dst(&mut self) -> DST_W {
+        DST_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -7,7 +7,7 @@ keywords = ["arm", "cortex-m", "max32660", "svd2rust"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/rbkettlewell/max32660-pac"
 edition = "2021"
-version = "0.1.1"
+version = "0.1.2"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

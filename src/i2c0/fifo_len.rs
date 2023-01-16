@@ -13,6 +13,27 @@ impl From<crate::R<FIFO_LEN_SPEC>> for R {
         R(reader)
     }
 }
+#[doc = "Register `FIFO_LEN` writer"]
+pub struct W(crate::W<FIFO_LEN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<FIFO_LEN_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<FIFO_LEN_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<FIFO_LEN_SPEC>) -> Self {
+        W(writer)
+    }
+}
 #[doc = "Field `RX_LEN` reader - Receive FIFO Length."]
 pub struct RX_LEN_R(crate::FieldReader<u8, u8>);
 impl RX_LEN_R {
@@ -55,7 +76,15 @@ impl R {
         TX_LEN_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
-#[doc = "FIFO Configuration Register.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_len](index.html) module"]
+impl W {
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "FIFO Configuration Register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo_len](index.html) module"]
 pub struct FIFO_LEN_SPEC;
 impl crate::RegisterSpec for FIFO_LEN_SPEC {
     type Ux = u32;
@@ -63,6 +92,10 @@ impl crate::RegisterSpec for FIFO_LEN_SPEC {
 #[doc = "`read()` method returns [fifo_len::R](R) reader structure"]
 impl crate::Readable for FIFO_LEN_SPEC {
     type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [fifo_len::W](W) writer structure"]
+impl crate::Writable for FIFO_LEN_SPEC {
+    type Writer = W;
 }
 #[doc = "`reset()` method sets FIFO_LEN to value 0"]
 impl crate::Resettable for FIFO_LEN_SPEC {

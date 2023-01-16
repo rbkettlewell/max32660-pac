@@ -2,10 +2,10 @@
 pub type CFG = crate::Reg<cfg::CFG_SPEC>;
 #[doc = "DMA Channel Configuration Register."]
 pub mod cfg;
-#[doc = "ST register accessor: an alias for `Reg<ST_SPEC>`"]
-pub type ST = crate::Reg<st::ST_SPEC>;
+#[doc = "STAT register accessor: an alias for `Reg<STAT_SPEC>`"]
+pub type STAT = crate::Reg<stat::STAT_SPEC>;
 #[doc = "DMA Channel Status Register."]
-pub mod st;
+pub mod stat;
 #[doc = "SRC register accessor: an alias for `Reg<SRC_SPEC>`"]
 pub type SRC = crate::Reg<src::SRC_SPEC>;
 #[doc = "Source Device Address. If SRCINC=1, the counter bits are incremented by 1,2, or 4, depending on the data width of each AHB cycle. For peripheral transfers, some or all of the actual address bits are fixed. If SRCINC=0, this register remains constant. In the case where a count-to-zero condition occurs while RLDEN=1, the register is reloaded with the contents of DMA_SRC_RLD."]

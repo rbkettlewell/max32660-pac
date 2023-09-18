@@ -571,7 +571,7 @@ pub struct SPIMSS {
 unsafe impl Send for SPIMSS {}
 impl SPIMSS {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const spimss::RegisterBlock = 0x4001_8000 as *const _;
+    pub const PTR: *const spimss::RegisterBlock = 0x4001_9000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const spimss::RegisterBlock {

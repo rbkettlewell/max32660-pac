@@ -8427,7 +8427,7 @@
    <name>SPIMSS</name>
    <description>Serial Peripheral Interface.</description>
    <prependToName>SPIMSS0_</prependToName>
-   <baseAddress>0x40018000</baseAddress>
+   <baseAddress>0x40019000</baseAddress>
    <addressBlock>
     <offset>0x00</offset>
     <size>0x1000</size>
